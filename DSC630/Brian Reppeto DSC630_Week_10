@@ -1,0 +1,335 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "809bef7e-0744-46f0-b352-a89bf179ef2c",
+   "metadata": {},
+   "source": [
+    "### DSC 630 Week  : \n",
+    "#### Activity 10.2 \n",
+    "#### Author: Brian Reppeto 10/29/2024"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "b99f67cc-c0f7-484c-a65e-c744928253fa",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# import libraries\n",
+    "\n",
+    "import pandas as pd\n",
+    "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+    "from sklearn.metrics.pairwise import cosine_similarity"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "672cddac-86ca-4f35-be75-d2b5f6b4759e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Load data\n",
+    "\n",
+    "movies = pd.read_csv('ml-latest-small/movies.csv')\n",
+    "ratings = pd.read_csv('ml-latest-small/ratings.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "157d9b15-c69c-4b95-a0bf-0e578c15102a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>movieId</th>\n",
+       "      <th>title</th>\n",
+       "      <th>genres</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1</td>\n",
+       "      <td>Toy Story (1995)</td>\n",
+       "      <td>Adventure|Animation|Children|Comedy|Fantasy</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>2</td>\n",
+       "      <td>Jumanji (1995)</td>\n",
+       "      <td>Adventure|Children|Fantasy</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>3</td>\n",
+       "      <td>Grumpier Old Men (1995)</td>\n",
+       "      <td>Comedy|Romance</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>4</td>\n",
+       "      <td>Waiting to Exhale (1995)</td>\n",
+       "      <td>Comedy|Drama|Romance</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5</td>\n",
+       "      <td>Father of the Bride Part II (1995)</td>\n",
+       "      <td>Comedy</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   movieId                               title  \\\n",
+       "0        1                    Toy Story (1995)   \n",
+       "1        2                      Jumanji (1995)   \n",
+       "2        3             Grumpier Old Men (1995)   \n",
+       "3        4            Waiting to Exhale (1995)   \n",
+       "4        5  Father of the Bride Part II (1995)   \n",
+       "\n",
+       "                                        genres  \n",
+       "0  Adventure|Animation|Children|Comedy|Fantasy  \n",
+       "1                   Adventure|Children|Fantasy  \n",
+       "2                               Comedy|Romance  \n",
+       "3                         Comedy|Drama|Romance  \n",
+       "4                                       Comedy  "
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# head the data\n",
+    "\n",
+    "movies.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "70e41188-fdbb-4b80-983c-20c159c0c0e7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>userId</th>\n",
+       "      <th>movieId</th>\n",
+       "      <th>rating</th>\n",
+       "      <th>timestamp</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>964982703</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>3</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>964981247</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>1</td>\n",
+       "      <td>6</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>964982224</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1</td>\n",
+       "      <td>47</td>\n",
+       "      <td>5.0</td>\n",
+       "      <td>964983815</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>1</td>\n",
+       "      <td>50</td>\n",
+       "      <td>5.0</td>\n",
+       "      <td>964982931</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   userId  movieId  rating  timestamp\n",
+       "0       1        1     4.0  964982703\n",
+       "1       1        3     4.0  964981247\n",
+       "2       1        6     4.0  964982224\n",
+       "3       1       47     5.0  964983815\n",
+       "4       1       50     5.0  964982931"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# head the data\n",
+    "\n",
+    "ratings.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f26284c6-2b1c-419e-ac8c-61e1a445cf47",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Merge tags with movies\n",
+    "merged = pd.merge(movies, ratings, on='movieId', how='left')\n",
+    "merged['tags'] = merged['tag'].fillna('')\n",
+    "merged['metadata'] = merged['genres'] + ' ' + merged['tags']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cd5be5df-c38f-40e8-9bac-1f78e09cd00f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Fill NaN values in metadata\n",
+    "merged['metadata'] = merged['metadata'].fillna('')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e75269e0-5394-4eab-913c-31e636870938",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Vectorize metadata using TF-IDF\n",
+    "vectorizer = TfidfVectorizer(stop_words='english')\n",
+    "tfidf_matrix = vectorizer.fit_transform(merged['metadata'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b575f1ed-c3d5-4875-bb04-7f6f6790c625",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Compute cosine similarity\n",
+    "cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "548d81e1-b9f8-4354-b234-0dba7a86ce25",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Function to get movie recommendations\n",
+    "def recommend_movies(title, cosine_sim=cosine_sim):\n",
+    "    # Get the index of the movie that matches the title\n",
+    "    idx = merged[merged['title'].str.contains(title, case=False)].index[0]\n",
+    "    \n",
+    "    # Get the pairwise similarity scores of all movies with that movie\n",
+    "    sim_scores = list(enumerate(cosine_sim[idx]))\n",
+    "    \n",
+    "    # Sort the movies based on similarity scores\n",
+    "    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)\n",
+    "    \n",
+    "    # Get the indices of the 10 most similar movies\n",
+    "    sim_indices = [i[0] for i in sim_scores[1:11]]\n",
+    "    \n",
+    "    # Return the titles of the top 10 movies\n",
+    "    return merged['title'].iloc[sim_indices]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "12ab89b3-00fb-4ac9-88c3-11636c0704f8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Example usage\n",
+    "movie_title = \"Toy Story\"\n",
+    "recommendations = recommend_movies(movie_title)\n",
+    "print(\"Recommended movies:\")\n",
+    "print(recommendations)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
