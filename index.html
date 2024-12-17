@@ -3,31 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Brian Reppeto - Data Science Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 1em 0;
+        }
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+        }
+        section {
+            padding: 2em;
+            margin: 2em auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 0.5em;
+        }
+        .project {
+            margin-bottom: 1.5em;
+        }
+        .project h3 {
+            margin: 0;
+            color: #0073e6;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background-color: #0073e6;
+            color: white;
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Webpage</h1>
+        <h1>Brian Reppeto - Data Science Portfolio</h1>
     </header>
+    
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>With over a decade of experience in the healthcare financial sector, my role as Lead Business Intelligence Developer at Mercy Health allows me to leverage my Master's in Data Science and MBA in Accounting to enhance organizational efficiency through data-driven decision-making. My expertise in unstructured data, algorithms, and statistical analysis, bolstered by certifications in Azure Fundamentals and H2O AI/ML services, has been instrumental in steering Mercy Health's revenue cycle towards financial excellence. Our team's mission to innovate within healthcare aligns with my passion for transforming complex data into actionable insights, fostering a culture of continuous improvement and strategic growth.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:example@example.com">breppeto@gmail.com</a></p>
-        </section>
-    </main>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>With over a decade of experience in the healthcare financial sector, I am a Lead Business Intelligence Developer at Mercy Health. Leveraging a Master's in Data Science and an MBA in Accounting, I specialize in enhancing organizational efficiency through data-driven decision-making. My expertise includes unstructured data, algorithms, and statistical analysis, supported by certifications in Azure Fundamentals and H2O AI/ML services.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="project">
+            <h3>Sales Forecasting with Walmart Dataset</h3>
+            <p>Built predictive models to forecast sales using historical data. Utilized Python, Pandas, and Scikit-Learn to develop and optimize the models.</p>
+        </div>
+
+        <div class="project">
+            <h3>Netflix Data Visualization</h3>
+            <p>Created interactive dashboards to visualize trends in Netflix viewing habits using Python and Tableau.</p>
+        </div>
+
+        <div class="project">
+            <h3>Pollution Ethics Analysis</h3>
+            <p>Conducted an ethical analysis on pollution using multiple ethical frameworks, presenting findings in a detailed paper and visual story.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>PySpark</li>
+            <li>MLlib</li>
+            <li>Retrieval-Augmented Generation (RAG)</li>
+            <li>Python</li>
+            <li>Data Visualization</li>
+            <li>Machine Learning</li>
+            <li>Pandas</li>
+            <li>SQL</li>
+            <li>Scikit-Learn</li>
+            <li>Power BI</li>
+            <li>Tableau</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:b_reppeto@yahoo.com">breppeto@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/brian-reppeto-mba-7850b54b" target="_blank">linkedin.com/in/brian-reppeto-mba-7850b54b</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 My Webpage. All Rights Reserved.</p>
+        <p>&copy; 2024 Brian Reppeto | Data Science Portfolio</p>
     </footer>
 </body>
 </html>
