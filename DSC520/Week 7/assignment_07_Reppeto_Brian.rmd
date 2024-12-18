@@ -1,0 +1,194 @@
+---
+title: "Student Survey Analysis"
+author: "Reppeto, Brian"
+date: July 18, 2023
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+ 
+---
+
+# Student Survey Analysis
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(MASS)
+```
+
+# Questions
+```{r, echo=FALSE}
+library(readr)
+setwd("~/DSC520/Week 7")
+student_survey_df <-read.csv("student-survey.csv")
+```
+## 1.
+
+# Calculating the covariance matrix
+<!-- cov_matrix -->
+```{r Covariance Matrix, echo=FALSE}
+cov_matrix <- cov(student_survey_df[, c("TimeReading", "TimeTV", "Happiness", "Gender")])
+cov_matrix
+
+```
+
+
+
+
+<!-- cov_time_read_gender -->
+
+```{r eval=FALSE, include=FALSE}
+library(readr)
+library(ggplot2)
+setwd("~/DSC520/Week 7")
+student_survey_df <-read.csv("student-survey.csv")
+
+cov_time_read_gender <-
+  cov(student_survey_df$TimeReading, student_survey_df$Gender)
+cov_time_read_gender
+```
+
+<!-- cov_time_tv_gender -->
+
+```{r eval=FALSE, include=FALSE}
+cov_time_tv_gender <- cov(student_survey_df$TimeTV, student_survey_df$Gender)
+cov_time_tv_gender
+```
+
+<!-- cov_happiness_gender -->
+
+```{r eval=FALSE, include=FALSE}
+cov_happiness_gender <-
+  cov(student_survey_df$Happiness, student_survey_df$Gender)
+cov_happiness_gender
+
+```
+
+The covariance matrix provides valuable insights into the relationships between 
+variables. It measures how the variables change together. Based on these results
+the covariance for cov_time_read_gender is -0.08181818. This means there is a 
+slightly negative relationship between the time spent reading and gender. The 
+covariance for cov_time_tv_gender is 0.04545455. This indicates a positive 
+relationship between the time spent watching TV and gender.  The covariance for  
+cov_happiness_gender is 1.116636, which indicates a relatively strong positive 
+relationship between happiness and gender.  All and all, A positive covariance 
+indicates a positive relationship, and a negative covariance indicates a 
+negative relationship.
+
+
+
+## 2.
+The Student Survey dataset consists of four variables:
+TimeReading: The amount of time spent reading (in minutes).
+TimeTV: The amount of time spent watching television (in minutes).
+Happiness: Subjective happiness rating.
+Gender: Gender of the student (0 for female, 1 for male).
+
+Changing the measurement scale of variables can affect the covariance 
+calculation.  For example, if we change the measurement of TimeReading to 
+hours instead of minutes, the covariance values would increase by a factor 
+of 60 since the unit of measurement is larger. The same could be said about 
+changing the measurement units of TimeTV, as it is measured in minutes as well.
+
+A better alternative to address this issue is to standardize the variables 
+before calculating the covariance or correlation. Standardizing the variables
+scales to have a zero mean and unit variance, would allowing for more 
+meaningful comparison.
+
+## 3.
+A Pearson correlation test might be a good alternative with this dataset. Since
+all the variables are continuous (TimeReading, TimeTV, Happiness), and we are 
+interested in measuring the linear relationship between them. Pearson 
+correlation is appropriate for this scenario. Based on the Pearson correlation
+below, there appears to be a positive correlation between TimeTV and Happiness,
+and a negative correlation between TimeReading and TimeTV.
+
+## 4.
+Correlation analysis of all variables
+```{r Pearson Correlation, echo=FALSE}
+cor_matrix_all <-
+  cor(student_survey_df [, c("TimeReading", "TimeTV", "Happiness")], method = "pearson")
+cor_matrix_all
+```
+
+
+
+Correlation point graph on Happiness and TimeTv
+
+```{r echo=FALSE}
+library(ggplot2)
+cor_plot <-ggplot(student_survey_df, aes(x = Happiness, y = TimeTV)) + 
+  geom_point() +     geom_smooth(method = "lm",se = TRUE, color = 'red')
+cor_plot
+```
+
+Single correlation between TimeTv and Happiness
+
+```{r echo=FALSE}
+cor_single_pair <-
+  cor(student_survey_df$TimeTV,
+      student_survey_df$Happiness,
+      method = "pearson")
+cor_single_pair
+```
+
+Confidence correlation with interval at 99%
+```{r echo=FALSE}
+cor_matrix_all_99 <-
+  cor.test(
+    student_survey_df$TimeTV ,
+    student_survey_df$Happiness,
+    method = "pearson",
+    conf.level = 0.99
+  )
+cor_matrix_all_99
+```
+The correlation matrix suggests that there are significant relationships 
+between the variables. Spending more time reading appears to be associated 
+with less time spent watching TV and a lower happiness level. Additionally, 
+spending more time watching TV is linked to less time spent reading and a 
+slightly higher happiness levels.
+
+## 5.
+Pearson Correlation coefficient of TimeTV and Happiness 
+
+Coefficient of determination of TimeTV and Happiness
+```{r echo=FALSE}
+cor_coefficient <-
+  cor(student_survey_df$TimeTV,
+      student_survey_df$Happiness,
+      method = "pearson")
+coeff_of_determination <- cor_coefficient ^ 2
+cor_coefficient
+coeff_of_determination 
+```
+
+The results suggest that there is a positive relationship between time and 
+happiness, and time can explain about 40.52% of the variability in happiness 
+levels. 
+
+## 6.
+Based on the analysis, there is a correlations between TimeReading, TimeTV, 
+and Happiness. However, remember that correlation does not imply causation.
+While I cannot conclude that watching more TV caused students to read less 
+based on the analysis. Further more controlled experiments would be necessary 
+to establish causation.
+
+## 7.
+
+Partial correlation between TimeReading and Happiness controlling for Gender
+```{r echo=FALSE}
+library(ppcor)
+
+
+partial_corr <-
+  pcor.test(student_survey_df$TimeReading,
+            student_survey_df$Happiness,
+            x = student_survey_df$Gender)
+print(partial_corr$estimate)
+```
+
+The partial correlation between time reading and happiness, controlling for 
+gender, indicates a weak negative association. Controlling for the gender 
+variable allows us to understand the unique relationship between the other two 
+variables and better understand their connection. 

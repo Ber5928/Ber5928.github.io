@@ -1,0 +1,282 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[sc]{mathpazo}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\makeatother
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+
+\title{}
+
+
+
+\maketitle
+The results below are generated from an R script.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Assignment: ASSIGNMENT 9_2}
+\hlcom{# Name: Reppeto, Brian}
+\hlcom{# Date: 2023-07-31}
+
+\hlcom{## Set the working directory to the root of your DSC 520 directory}
+\hlkwd{setwd}\hlstd{(}\hlstr{"~/DSC520/Week 9"}\hlstd{)}
+
+\hlkwd{library}\hlstd{(readr)}
+\hlkwd{library}\hlstd{(caret)}
+
+\hlcom{## Load the `data`}
+\hlstd{data} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"binary-classifier-data.csv"}\hlstd{)}
+
+\hlkwd{set.seed}\hlstd{(}\hlnum{42}\hlstd{)}  \hlcom{# For reproducibility}
+\hlstd{train_index} \hlkwb{<-} \hlkwd{createDataPartition}\hlstd{(data}\hlopt{$}\hlstd{label,} \hlkwc{p} \hlstd{=} \hlnum{0.8}\hlstd{,} \hlkwc{list} \hlstd{=} \hlnum{FALSE}\hlstd{)}
+\hlstd{train_data} \hlkwb{<-} \hlstd{data[train_index, ]}
+\hlstd{test_data} \hlkwb{<-} \hlstd{data[}\hlopt{-}\hlstd{train_index, ]}
+
+\hlstd{model} \hlkwb{<-} \hlkwd{glm}\hlstd{(label} \hlopt{~} \hlstd{x} \hlopt{+} \hlstd{y,} \hlkwc{data} \hlstd{= train_data,} \hlkwc{family} \hlstd{= binomial)}
+
+\hlkwd{summary}\hlstd{(model)}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## glm(formula = label ~ x + y, family = binomial, data = train_data)
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(>|z|)    
+## (Intercept)  0.460877   0.130570   3.530 0.000416 ***
+## x           -0.003124   0.002047  -1.526 0.126960    
+## y           -0.007875   0.002068  -3.808 0.000140 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1661.9  on 1198  degrees of freedom
+## Residual deviance: 1641.7  on 1196  degrees of freedom
+## AIC: 1647.7
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{predictions} \hlkwb{<-} \hlkwd{predict}\hlstd{(model,} \hlkwc{newdata} \hlstd{= test_data,} \hlkwc{type} \hlstd{=} \hlstr{"response"}\hlstd{)}
+
+\hlkwd{print}\hlstd{(predictions)}
+\end{alltt}
+\begin{verbatim}
+##         4         5         9        20        23        29        31        34        44 
+## 0.4048469 0.3963584 0.3789795 0.3858841 0.3937299 0.4064059 0.4005530 0.3989758 0.3970116 
+##        45        59        64        66        68        75        81        86        93 
+## 0.3902614 0.4912433 0.4895130 0.4927954 0.5105171 0.4914386 0.5052435 0.4894538 0.4949648 
+##        96       104       113       114       117       122       123       124       128 
+## 0.4952474 0.4349856 0.4352794 0.4382040 0.4385620 0.4332609 0.4332466 0.4333228 0.4353101 
+##       129       134       136       139       144       152       154       160       174 
+## 0.4348778 0.4293875 0.4348100 0.4312895 0.4390672 0.4348680 0.4329375 0.4351788 0.4252932 
+##       177       183       186       194       196       199       200       205       209 
+## 0.4262217 0.4114478 0.4280357 0.4019428 0.4084266 0.4897186 0.4839768 0.4907929 0.4933128 
+##       214       217       220       221       231       245       251       258       260 
+## 0.4838753 0.4866891 0.4849638 0.4829257 0.3873681 0.3907505 0.3879897 0.3877217 0.5349380 
+##       270       278       279       286       287       290       301       305       310 
+## 0.5317538 0.5361680 0.5433535 0.5387093 0.5429486 0.5395656 0.5444645 0.5377039 0.5399323 
+##       313       319       326       329       336       338       340       342       343 
+## 0.5450823 0.5008187 0.5018512 0.4933912 0.4952490 0.4967977 0.5049788 0.5066976 0.5036812 
+##       347       351       352       359       364       367       368       373       380 
+## 0.5042475 0.4932112 0.5047179 0.4985164 0.5010874 0.5061767 0.5107832 0.5260540 0.5182766 
+##       383       386       395       400       401       405       409       413       419 
+## 0.5345097 0.5378169 0.5180122 0.5211844 0.5247113 0.5203461 0.5232296 0.5262791 0.5316744 
+##       423       431       435       436       439       441       446       447       452 
+## 0.5325890 0.5429018 0.5349905 0.5420308 0.5451788 0.5326337 0.5390994 0.5400997 0.5415740 
+##       456       465       466       468       470       484       494       495       515 
+## 0.5301261 0.5366030 0.5379332 0.5318592 0.5296202 0.6058309 0.6104535 0.6166963 0.6076502 
+##       518       519       525       534       535       538       541       549       551 
+## 0.6098502 0.6111415 0.6100516 0.4028794 0.4010491 0.3907881 0.4048762 0.4103108 0.4032439 
+##       552       553       556       575       576       587       588       591       597 
+## 0.4017009 0.4024125 0.3948095 0.4030217 0.5401973 0.5436430 0.5406647 0.5434188 0.5406168 
+##       599       608       609       612       628       632       635       639       641 
+## 0.5450107 0.5594199 0.5523968 0.5384868 0.5535787 0.5574713 0.5684541 0.5633256 0.5593648 
+##       642       643       648       655       656       657       658       665       693 
+## 0.5527910 0.5539353 0.5647708 0.5497030 0.5574080 0.5523396 0.5567961 0.5474543 0.5041145 
+##       704       713       714       716       718       723       728       734       736 
+## 0.4990655 0.4989570 0.3685882 0.3643515 0.3695009 0.3700784 0.3663279 0.3604555 0.3651941 
+##       745       748       759       763       766       775       777       782       787 
+## 0.3704403 0.3695366 0.3661003 0.3714134 0.3669010 0.4632503 0.4630463 0.4649184 0.4681036 
+##       795       801       804       806       807       810       812       814       825 
+## 0.4568643 0.4726063 0.4566534 0.4512534 0.4582433 0.4571213 0.4712813 0.4715620 0.5047096 
+##       842       848       855       856       857       867       876       877       878 
+## 0.5122521 0.5196999 0.5149958 0.5098188 0.5057732 0.5235484 0.5190588 0.5085192 0.5181539 
+##       881       889       890       891       892       910       916       920       940 
+## 0.5171138 0.5210554 0.5167940 0.5191336 0.5171379 0.5163542 0.5221615 0.5219566 0.4316760 
+##       942       948       949       952       953       957       959       962       965 
+## 0.4320192 0.4381571 0.4322574 0.4348580 0.4364300 0.4280239 0.4277476 0.4393581 0.4309392 
+##       970       972       973       975       976       986       994      1003      1004 
+## 0.4321056 0.4261940 0.4387456 0.4348985 0.4338531 0.4356529 0.5368518 0.5261309 0.5320128 
+##      1008      1010      1012      1016      1019      1022      1028      1030      1031 
+## 0.4992513 0.5201869 0.5201184 0.5366243 0.5383631 0.5203700 0.5248956 0.5147527 0.5120258 
+##      1037      1040      1048      1059      1066      1080      1086      1088      1089 
+## 0.5182426 0.4454133 0.4452501 0.4501085 0.4504436 0.4445024 0.4465533 0.4485562 0.4472533 
+##      1095      1097      1099      1106      1115      1127      1131      1133      1139 
+## 0.4440121 0.5064534 0.5098135 0.5091205 0.5135906 0.5013144 0.5139128 0.5087114 0.5687760 
+##      1147      1153      1158      1161      1164      1166      1169      1175      1179 
+## 0.5721920 0.5806708 0.5811489 0.5684049 0.5774636 0.5598749 0.5560831 0.5458520 0.5588177 
+##      1191      1194      1203      1220      1227      1230      1247      1253      1255 
+## 0.5570438 0.5600346 0.5564487 0.5542140 0.5445378 0.5546050 0.5532934 0.5465872 0.5447842 
+##      1256      1259      1260      1261      1264      1270      1273      1274      1284 
+## 0.5460822 0.5458005 0.5490261 0.5416401 0.5491875 0.5530726 0.4538392 0.4515331 0.4406284 
+##      1291      1296      1299      1305      1308      1312      1314      1319      1334 
+## 0.4384443 0.4473023 0.4389325 0.4467838 0.4439730 0.4320967 0.4418670 0.4568220 0.4461078 
+##      1342      1343      1351      1355      1361      1374      1388      1392      1395 
+## 0.4551667 0.4464504 0.5171259 0.5077329 0.5129415 0.5129634 0.5101147 0.5089372 0.5146739 
+##      1398      1400      1405      1412      1414      1415      1424      1428      1434 
+## 0.5163131 0.5107736 0.5795533 0.5981800 0.5923009 0.5844120 0.5900947 0.5957915 0.5808095 
+##      1436      1443      1451      1470      1473      1475      1482      1483      1484 
+## 0.5955367 0.5954479 0.5926567 0.3964789 0.4105542 0.3959278 0.4160845 0.4021016 0.4017718 
+##      1490      1492 
+## 0.3868344 0.3981562
+\end{verbatim}
+\begin{alltt}
+\hlstd{predicted_labels} \hlkwb{<-} \hlkwd{ifelse}\hlstd{(predictions} \hlopt{>} \hlnum{0.5}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{0}\hlstd{)}
+\hlstd{accuracy} \hlkwb{<-} \hlkwd{mean}\hlstd{(predicted_labels} \hlopt{==} \hlstd{test_data}\hlopt{$}\hlstd{label)}
+
+\hlkwd{print}\hlstd{(accuracy)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.5384615
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The R session information (including the OS info, R version and all
+packages used):
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{sessionInfo}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## R version 4.3.0 (2023-04-21)
+## Platform: aarch64-apple-darwin20 (64-bit)
+## Running under: macOS Ventura 13.4.1
+## 
+## Matrix products: default
+## BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## time zone: America/New_York
+## tzcode source: internal
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] foreign_0.8-84  lm.beta_1.7-2   lubridate_1.9.2 forcats_1.0.0   stringr_1.5.0  
+##  [6] dplyr_1.1.2     purrr_1.0.1     tidyr_1.3.0     tibble_3.2.1    tidyverse_2.0.0
+## [11] readxl_1.4.3    caret_6.0-94    lattice_0.21-8  ggplot2_3.4.2   readr_2.1.4    
+## 
+## loaded via a namespace (and not attached):
+##  [1] tidyselect_1.2.0     timeDate_4022.108    farver_2.1.1         fastmap_1.1.1       
+##  [5] pROC_1.18.4          digest_0.6.33        rpart_4.1.19         timechange_0.2.0    
+##  [9] lifecycle_1.0.3      survival_3.5-5       magrittr_2.0.3       compiler_4.3.0      
+## [13] rlang_1.1.1          tools_4.3.0          utf8_1.2.3           yaml_2.3.7          
+## [17] data.table_1.14.8    knitr_1.43           labeling_0.4.2       bit_4.0.5           
+## [21] plyr_1.8.8           withr_2.5.0          nnet_7.3-19          grid_4.3.0          
+## [25] stats4_4.3.0         fansi_1.0.4          xtable_1.8-4         colorspace_2.1-0    
+## [29] future_1.33.0        globals_0.16.2       scales_1.2.1         iterators_1.0.14    
+## [33] MASS_7.3-60          tinytex_0.45         cli_3.6.1            rmarkdown_2.23      
+## [37] crayon_1.5.2         generics_0.1.3       rstudioapi_0.15.0    future.apply_1.11.0 
+## [41] reshape2_1.4.4       tzdb_0.4.0           splines_4.3.0        parallel_4.3.0      
+## [45] cellranger_1.1.0     vctrs_0.6.3          hardhat_1.3.0        Matrix_1.6-0        
+## [49] hms_1.1.3            bit64_4.0.5          listenv_0.9.0        foreach_1.5.2       
+## [53] gower_1.0.1          recipes_1.0.6        glue_1.6.2           parallelly_1.36.0   
+## [57] codetools_0.2-19     stringi_1.7.12       gtable_0.3.3         munsell_0.5.0       
+## [61] pillar_1.9.0         htmltools_0.5.5      ipred_0.9-14         lava_1.7.2.1        
+## [65] R6_2.5.1             vroom_1.6.3          evaluate_0.21        highr_0.10          
+## [69] class_7.3-22         Rcpp_1.0.11          nlme_3.1-162         prodlim_2023.03.31  
+## [73] xfun_0.39            ModelMetrics_1.2.2.2 pkgconfig_2.0.3
+\end{verbatim}
+\begin{alltt}
+\hlkwd{Sys.time}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "2023-08-06 21:38:20 EDT"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{document}

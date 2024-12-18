@@ -1,0 +1,194 @@
+YEAR,NAME,ALIAS,VENUE_NAME,SURFACE,ROOF_TYPE,STATE
+2018,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2018,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2018,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2018,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL
+2018,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2018,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2018,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2018,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2018,Cleveland Browns,CLE,FirstEnergy Stadium,Grass,Outdoor,OH
+2018,Los Angeles Chargers,LAC,Dignity Health Sports Park,Grass,Outdoor,CA
+2018,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2018,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2018,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2018,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2018,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2018,Oakland Raiders,OAK,RingCentral Coliseum,Grass,Outdoor,CA
+2018,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2018,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2018,Washington Redskins,WAS,FedExField,Grass,Outdoor,MD
+2018,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2018,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2018,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2018,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2018,Los Angeles Rams,LA,Los Angeles Memorial Coliseum,Grass,Outdoor,CA
+2018,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2018,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2018,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2018,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2018,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2018,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2018,Jacksonville Jaguars,JAC,TIAA Bank Field,Grass,Outdoor,FL
+2018,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2019,Cleveland Browns,CLE,FirstEnergy Stadium,Grass,Outdoor,OH
+2019,Jacksonville Jaguars,JAC,TIAA Bank Field,Grass,Outdoor,FL
+2019,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2019,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2019,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2019,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2019,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2019,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2019,Oakland Raiders,OAK,RingCentral Coliseum,Grass,Outdoor,CA
+2019,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2019,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2019,Washington Redskins,WAS,FedExField,Grass,Outdoor,MD
+2019,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL
+2019,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2019,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2019,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2019,Los Angeles Chargers,LAC,Dignity Health Sports Park,Grass,Outdoor,CA
+2019,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2019,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2019,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2019,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2019,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2019,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2019,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2019,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2019,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2019,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2019,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2019,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2019,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2019,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2019,Los Angeles Rams,LA,Los Angeles Memorial Coliseum,Grass,Outdoor,CA
+2019,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2020,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2020,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2020,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2020,Washington Football Team,WAS,FedExField,Grass,Outdoor,MD
+2020,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2020,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2020,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2020,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2020,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2020,Los Angeles Rams,LA,SoFi Stadium,Artificial,Outdoor,CA
+2020,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2020,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2020,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2020,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2020,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2020,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2020,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL
+2020,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2020,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2020,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2020,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2020,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2020,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2020,Los Angeles Chargers,LAC,SoFi Stadium,Artificial,Outdoor,CA
+2020,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2020,Las Vegas Raiders,LV,Allegiant Stadium,Grass,Dome,NV
+2020,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2020,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2020,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2020,Jacksonville Jaguars,JAC,TIAA Bank Field,Grass,Outdoor,FL
+2020,Cleveland Browns,CLE,FirstEnergy Stadium,Grass,Outdoor,OH
+2020,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2021,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2021,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2021,Jacksonville Jaguars,JAC,EverBank Stadium,Grass,Outdoor,FL
+2021,Cleveland Browns,CLE,Cleveland Browns Stadium,Grass,Outdoor,OH
+2021,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2021,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2021,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2021,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2021,Washington Commanders,WAS,FedExField,Grass,Outdoor,MD
+2021,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2021,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2021,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2021,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2021,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2021,Los Angeles Chargers,LAC,SoFi Stadium,Artificial,Outdoor,CA
+2021,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2021,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2021,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2021,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2021,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2021,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2021,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2021,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2021,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2021,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2021,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2021,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2021,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2021,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2021,Los Angeles Rams,LA,SoFi Stadium,Artificial,Outdoor,CA
+2021,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL
+2021,Las Vegas Raiders,LV,Allegiant Stadium,Grass,Dome,NV
+2022,Los Angeles Rams,LA,SoFi Stadium,Artificial,Outdoor,CA
+2022,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2022,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2022,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2022,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL
+2022,Washington Commanders,WAS,FedExField,Grass,Outdoor,MD
+2022,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2022,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2022,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2022,Los Angeles Chargers,LAC,SoFi Stadium,Artificial,Outdoor,CA
+2022,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2022,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2022,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2022,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2022,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2022,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2022,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2022,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2022,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2022,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2022,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2022,Las Vegas Raiders,LV,Allegiant Stadium,Grass,Dome,NV
+2022,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2022,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2022,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2022,Cleveland Browns,CLE,Cleveland Browns Stadium,Grass,Outdoor,OH
+2022,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2022,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2022,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2022,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2022,Jacksonville Jaguars,JAC,EverBank Stadium,Grass,Outdoor,FL
+2022,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2023,Arizona Cardinals,ARI,State Farm Stadium,Grass,Retractable_dome,AZ
+2023,Los Angeles Rams,LA,SoFi Stadium,Artificial,Outdoor,CA
+2023,Pittsburgh Steelers,PIT,Acrisure Stadium,Grass,Outdoor,PA
+2023,Atlanta Falcons,ATL,Mercedes-Benz Stadium,Artificial,Retractable_dome,GA
+2023,New York Jets,NYJ,MetLife Stadium,Artificial,Outdoor,NY
+2023,Cleveland Browns,CLE,Cleveland Browns Stadium,Grass,Outdoor,OH
+2023,Dallas Cowboys,DAL,AT&T Stadium,Artificial,Retractable_dome,TX
+2023,Chicago Bears,CHI,Soldier Field,Grass,Outdoor,IL
+2023,Jacksonville Jaguars,JAC,EverBank Stadium,Grass,Outdoor,FL
+2023,Tampa Bay Buccaneers,TB,Raymond James Stadium,Grass,Outdoor,FL
+2023,Philadelphia Eagles,PHI,Lincoln Financial Field,Grass,Outdoor,PA
+2023,Buffalo Bills,BUF,Highmark Stadium,Artificial,Outdoor,NY
+2023,Houston Texans,HOU,NRG Stadium,Artificial,Retractable_dome,TX
+2023,Seattle Seahawks,SEA,Lumen Field,Artificial,Outdoor,WA
+2023,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,Grass,Outdoor,MO
+2023,Denver Broncos,DEN,Empower Field at Mile High,Grass,Outdoor,CO
+2023,Minnesota Vikings,MIN,U.S. Bank Stadium,Artificial,Dome,MN
+2023,Baltimore Ravens,BAL,M&T Bank Stadium,Grass,Outdoor,MD
+2023,Indianapolis Colts,IND,Lucas Oil Stadium,Artificial,Retractable_dome,IN
+2023,New Orleans Saints,NO,Caesars Superdome,Artificial,Dome,LA
+2023,Tennessee Titans,TEN,Nissan Stadium,Grass,Outdoor,TN
+2023,Detroit Lions,DET,Ford Field,Artificial,Dome,MI
+2023,New England Patriots,NE,Gillette Stadium,Artificial,Outdoor,MA
+2023,Carolina Panthers,CAR,Bank of America Stadium,Artificial,Outdoor,NC
+2023,Cincinnati Bengals,CIN,Paycor Stadium,Artificial,Outdoor,OH
+2023,Green Bay Packers,GB,Lambeau Field,Grass,Outdoor,WI
+2023,New York Giants,NYG,MetLife Stadium,Artificial,Outdoor,NY
+2023,San Francisco 49ers,SF,Levi's Stadium,Grass,Outdoor,CA
+2023,Las Vegas Raiders,LV,Allegiant Stadium,Grass,Dome,NV
+2023,Los Angeles Chargers,LAC,SoFi Stadium,Artificial,Outdoor,CA
+2023,Washington Commanders,WAS,FedExField,Grass,Outdoor,MD
+2023,Miami Dolphins,MIA,Hard Rock Stadium,Grass,Outdoor,FL

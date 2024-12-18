@@ -1,0 +1,444 @@
+---
+title: "Final Step 2"
+author: "Brian Reppeto"
+date: '2023-08-6'
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+bibliography: bibliography.bib
+---
+
+# Markdown Basics
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Introduction
+
+Fantasy football is a popular online game where participants act as team 
+managers and draft real players from the National Football League (NFL) to form 
+fantasy teams. The performance of the actual stats of the players in real-life 
+games determines the fantasy team's score. Participants compete against one 
+another on a weekly head to head basis and these scores determine a weekly 
+winner.  One of the most important aspects of fantasy football is the drafting 
+phase, which takes place before the NFL regular season starts.  Participants 
+select players based on their projected performance and rankings.  I will use 
+the redraft type of league along with a snake draft type of draft for this
+analysis. Additionally, I will use the standard scoring system, which consists 
+of the following score process, 1 point per 25 passing yards, 4 points per 
+passing touchdown, 1 point per 10 rushing or receiving yards, 6 points per 
+rushing or receiving touchdown, -2 points per fumble lost or interception.
+
+
+The issue I want to research is being able to help predict fantasy football 
+drafting rankings and determine the value of positions in the draft.  
+Specifically, drafting quarterbacks, running backs, wide receivers, and tight 
+ends.  The goal is to develop a model or methodology that can help accurately 
+predict the ending rankings of NFL players for fantasy football drafts. This 
+project would be of particular interest to fantasy football participants, as it 
+can help them better draft a fantasy teams for their season.  By leveraging data
+science techniques, I can analyze historical player performance and other 
+relevant data to make informed predictions for the upcoming season's draft 
+rankings.  
+
+
+
+
+## Research questions
+
+1. What statistical features of NFL players historical performances are most 
+indicative of their fantasy football draft rankings?
+2. Can we identify any patterns or trends in player performance over the past 
+few seasons that might help predict future draft rankings (rookies will be 
+ignored for this evaluation)?
+3. Is there a relationship between the SOS of a team and the points scored by 
+the players for its team?
+4. Are there specific positions (quarterback, running back, wide receiver, etc.)
+that are more valuable to draft in a fantasy league before others? 
+5. Is there a relationship between an NFL teams winning percentage and the
+fantasy points scored by its players?
+
+
+## Approach
+
+1. Data Collection: Gather historical player performance data, fantasy football 
+draft rankings data, team data, and any other relevant datasets. 
+2. Conduct data analysis to understand the data, identify any missing values or 
+outliers, and gain insights into player performance and rankings trends.
+3. Select or create relevant features that may impact draft rankings (i.e. 
+player statistics from previous seasons, team performance metrics (Strength of
+schedule), etc.)
+4. Create a heat map to show the most valuable selections for a snake type
+draft.
+5. Provide a recommendation for the most effective method to help predict 
+fantasy football drafting rankings.
+
+
+## How approach addressed the problem
+
+By combining the multiple approaches listed above I will be able to compare 
+individual performances along with other factors to help provide valuable 
+insights into a ranking and value list for fantasy football managers.  This will
+all them to build competitive teams for the fantasy season. This will also allow
+me to group the players into clusters.
+
+This project will not be fully operational as all cuts for the NFL season will 
+not have happened by the time this project is complete.
+
+
+## Cleaning data
+```{r QB, eval=FALSE, include=FALSE}
+# Load the required library
+library(tidyverse)
+
+# Step 1: Read the CSV file into a data frame
+setwd("~/DSC520/Week 9/csv")
+# Read all the CSV files and bind them row-wise
+data1 <- read.csv("FantasyPros_Fantasy_Football_Statistics_QB-2_2021.csv")
+data2 <- read.csv("FantasyPros_Fantasy_Football_Statistics_QB_2022.csv")
+data3 <- read.csv("FantasyPros_Fantasy_Football_Statistics_QB-3_2020.csv")
+data4 <- read.csv("FantasyPros_Fantasy_Football_Statistics_QB-4_2019.csv")
+
+# Combine all data frames into one
+combined_data <-
+  rbind(data1,data2,data3,data4)
+
+# Write the merged data frame to a new CSV file
+write.csv(combined_data, file = "QB_Merged_Fantasy_Football_Statistics.csv"
+          , row.names = FALSE)
+
+
+```
+```{r RB, eval=FALSE, include=FALSE}
+# Load the required library
+library(tidyverse)
+
+# Step 1: Read the CSV file into a data frame
+setwd("~/DSC520/Week 9/csv")
+# Read all the CSV files and bind them row-wise
+
+data5 <- read.csv("FantasyPros_Fantasy_Football_Statistics_RB-2_2021.csv")
+data6 <- read.csv("FantasyPros_Fantasy_Football_Statistics_RB-3_2020.csv")
+data7 <- read.csv("FantasyPros_Fantasy_Football_Statistics_RB-4_2019.csv")
+data8 <- read.csv("FantasyPros_Fantasy_Football_Statistics_RB_2022.csv")
+
+
+# Combine all data frames into one
+combined_data2 <-
+  rbind(data5,data6,data7,data8)
+
+# Write the merged data frame to a new CSV file
+write.csv(combined_data2, file = "RB_Merged_Fantasy_Football_Statistics.csv"
+          , row.names = FALSE)
+
+
+```
+```{r WR, eval=FALSE, include=FALSE}
+# Load the required library
+library(tidyverse)
+
+# Step 1: Read the CSV file into a data frame
+setwd("~/DSC520/Week 9/csv")
+# Read all the CSV files and bind them row-wise
+
+data9 <- read.csv("FantasyPros_Fantasy_Football_Statistics_WR-2_2021.csv")
+data10 <- read.csv("FantasyPros_Fantasy_Football_Statistics_WR-3_2020.csv")
+data11 <- read.csv("FantasyPros_Fantasy_Football_Statistics_WR_2022.csv")
+data12 <- read.csv("FantasyPros_Fantasy_Football_Statistics_WR-4_2019.csv")
+
+# Combine all data frames into one
+combined_data3 <-
+  rbind(data9,data10,data11,data12)
+
+# Write the merged data frame to a new CSV file
+write.csv(combined_data3, file = "WR_Merged_Fantasy_Football_Statistics.csv"
+          , row.names = FALSE)
+
+```
+```{r TE, eval=FALSE, include=FALSE}
+# Load the required library
+library(tidyverse)
+
+# Step 1: Read the CSV file into a data frame
+setwd("~/DSC520/Week 9/csv")
+# Read all the CSV files and bind them row-wise
+
+data13 <- read.csv("FantasyPros_Fantasy_Football_Statistics_TE-2_2021.csv")
+data14 <- read.csv("FantasyPros_Fantasy_Football_Statistics_TE-4_2019.csv")
+data15 <- read.csv("FantasyPros_Fantasy_Football_Statistics_TE_2022.csv")
+data16 <- read.csv("FantasyPros_Fantasy_Football_Statistics_TE-3_2020.csv")
+
+# Combine all data frames into one
+combined_data4 <-
+  rbind(data13,data14,data15,data16)
+
+# Write the merged data frame to a new CSV file
+write.csv(combined_data4, file = "TE_Merged_Fantasy_Football_Statistics.csv"
+          , row.names = FALSE)
+
+
+```
+
+
+### Fantasy stats
+The data had to have positions added to the data field, in addition to the 
+fantasy year. Additionally, each position file had to be downloaded separately 
+and combined into one one fantasy stats table per position for 2019-2022. 
+Moreover, the fields also had to have the team for each player added.
+
+
+### Team standings
+The data had to be put into a tibble format removing the division and conference.
+Additionally, the teams moving on to the playoffs had to have the signifying 
+symbols removed from the team name.  Moreover, the fields also were 
+standardized by unbolding, removing the underlines, and hyperlinks.
+
+
+### Team offensive stats
+The offensive team stats had to have the fields standardized by unbolding, 
+removing the underlines, and hyperlinks.
+
+
+### Strength of schedule (SOS)
+The SOS data set had to have the date added to the file.  Each file was 
+downloaded separately and appended to each file.  The file is as of 2/28 for the 
+year that the season started (2019-2022).  This allows for the final SOS to have
+been calculated.
+
+
+## Data
+
+```{r stats, include=FALSE}
+library(readxl)
+library(tidyverse)
+setwd("~/DSC520/Week 9")
+QB_stats<-read_xlsx("QB_Merged_Fantasy_Football_Statistics.xlsx")
+RB_stats<-read_xlsx("RB_Merged_Fantasy_Football_Statistics.xlsx")
+WR_stats<-read_xlsx("WR_Merged_Fantasy_Football_Statistics.xlsx")
+TE_stats<-read_xlsx("TE_Merged_Fantasy_Football_Statistics.xlsx")
+
+```
+```{r, include=TRUE}
+head(QB_stats)
+head(RB_stats)
+head(WR_stats)
+head(TE_stats)
+```
+-   footballdb [@scoring2023]
+
+```{r SOS, include=FALSE}
+library(readxl)
+library(tidyverse)
+setwd("~/DSC520/Week 9")
+SOS<-read_xlsx("Strength of Schedule.xlsx")
+
+```
+```{r SOSall, include=TRUE}
+tail(SOS)
+
+```
+-   Strength of schedule [@sos2023]
+
+```{r Standings, include=FALSE}
+library(readxl)
+library(tidyverse)
+setwd("~/DSC520/Week 9")
+team_stand_22<-read_xlsx("2022_team_standings.xlsx")
+
+```
+```{r, include=TRUE}
+head(team_stand_22)
+```
+
+## Sumamry stats
+```{r QB_sum, include=TRUE} 
+library(dplyr)
+# Group data by Player and calculate summary statistics
+QB_summary_data <- QB_stats %>%
+  group_by(Player,Posit, Current_team) %>%
+  summarize(Avg_fant_pts = round(mean(FPTS))) %>%
+  arrange(desc(Avg_fant_pts))
+print(QB_summary_data)
+```
+```{r RB_summ, include=TRUE} 
+library(dplyr)
+# Group data by Player and calculate summary statistics
+RB_summary_data <- RB_stats %>%
+  group_by(Player,Posit, Current_team) %>%
+  summarize(Avg_fant_pts = round(mean(FPTS))) %>%
+  arrange(desc(Avg_fant_pts))
+print(RB_summary_data)
+```
+```{r WR_summ, include=TRUE} 
+library(dplyr)
+# Group data by Player and calculate summary statistics
+WR_summary_data <- WR_stats %>%
+  group_by(Player,Posit, Current_team) %>%
+  summarize(Avg_fant_pts = round(mean(FPTS))) %>%
+  arrange(desc(Avg_fant_pts))
+print(WR_summary_data)
+```
+
+```{r TE_summ, include=TRUE} 
+library(dplyr)
+# Group data by Player and calculate summary statistics
+TE_summary_data <- TE_stats %>%
+  group_by(Player,Posit, Current_team) %>%
+  summarize(Avg_fant_pts = round(mean(FPTS))) %>%
+  arrange(desc(Avg_fant_pts))
+
+print(TE_summary_data)
+```
+
+
+```{r consolidated, include=TRUE}
+all_players <- rbind(QB_summary_data, RB_summary_data, WR_summary_data, TE_summary_data)
+
+print(all_players)
+```
+
+```{r, grouped points by team & SOS, include=TRUE}
+all_sum_team <- all_players %>%
+  group_by(Current_team) %>%
+  summarize(ttl_Avg_fant_pts =sum(Avg_fant_pts))
+
+print(all_sum_team)
+
+```
+```{r avg_sos_rank, include=TRUE}
+sos_avg_rank <- SOS %>%
+  group_by(Team) %>%
+  summarize(avg_sos  = round(mean(ranking)))
+# the higher the ranking the harder the schedule
+
+print(sos_avg_rank)
+```
+```{r, include=TRUE}
+
+all_sum_team <- all_sum_team %>% mutate(avg_sos_rank = sos_avg_rank$avg_sos)
+
+print(all_sum_team)
+```
+```{r lm SOS, include=TRUE}
+library(lm.beta)
+model_1 <- lm( ttl_Avg_fant_pts ~ avg_sos_rank, data = all_sum_team)
+summary(model_1)
+standardized_betas_model_1 <- lm.beta(model_1)
+print(standardized_betas_model_1)
+
+
+```
+
+
+
+
+## Datsets
+
+Strength of schedule (as of 9/1 each year):
+
+https://www.teamrankings.com/nfl/ranking/schedule-strength-by-other?date=2022-09-01
+
+Fantasy scoring points by two types of systems:
+
+https://www.footballdb.com/fantasy-football/index.html
+
+Team standings:
+https://www.nfl.com/standings/division/2022/REG
+
+## Required Packages
+'tidyverse'
+'ggplot2' 
+'dplyr'
+'lm.beta'
+
+## Plots and tables needed
+
+1. Line plots to visualize trends in player performance over time.
+2. Tables to display the top-performing players based on historical fantasy 
+points.
+3. Heat map to help understand which positions are more important to draft due 
+to outliers in scoring by position.
+
+
+## Plots
+
+```{r QB_by_year ,echo=FALSE}
+library(dplyr)
+library(ggplot2)
+# Create the heatmap using ggplot2
+heatmap <-
+  ggplot(all_players, aes(x = Posit, y = Avg_fant_pts, fill = Avg_fant_pts)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "blue", high = "red") +
+  theme_minimal() +
+  labs(x = "Position", y = "Average Fantasy Points", 
+       title = "Heatmap of Scores by Player Avg 2019-2022")
+
+
+print(heatmap)
+
+```
+```{r, inlcude=FALSE}
+QB_filtered_players <-
+  subset(QB_summary_data, Current_team != "NO TEAM FA" &
+           Avg_fant_pts >= 100)
+RB_filtered_players <- subset(RB_summary_data, Current_team != "NO TEAM FA")
+WR_filtered_players <- subset(WR_summary_data, Current_team != "NO TEAM FA")
+TE_filtered_players <- subset(TE_summary_data, Current_team != "NO TEAM FA")
+```
+
+
+```{r line_plot, echo=FALSE}
+library(ggplot2)
+
+ggplot(QB_filtered_players , aes(x = Player, y = Avg_fant_pts, group = .5)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Average Fantasy Points QB's >=100 pts",
+       x = "Player Name",
+       y = "Average Fantasy Points") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size =5))
+        plot.margin = unit(c(0.1, 0.1, 0.1, 0.1), "cm")
+
+```
+
+
+## Question for future steps
+
+1. How can I incorporate additional data, such as team dynamics (coaching 
+issues, player issues), weather conditions, or player off-field behavior, 
+to improve the model's predictions?
+2. Can I build an ensemble model that combines the strengths of multiple 
+algorithms to achieve better prediction accuracy?
+3. How can I continuously update the model during the NFL season to account 
+for emerging trends and player performance changes?
+4. Can I use this research for in-season predictors?
+5. Review the correlations and adjust for outliers, also adjust for historical
+teams.
+6. Once historical teams added to player then review correlation for winning
+percentages to player FFB points totals.
+7. Provide a recommendation for the most effective method to help predict 
+fantasy football drafting rankings.
+
+# References
+```{r bibliography, echo=FALSE}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

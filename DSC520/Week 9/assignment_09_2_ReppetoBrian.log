@@ -1,0 +1,795 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  6 AUG 2023 21:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**assignment_09_2_ReppetoBrian.tex
+(./assignment_09_2_ReppetoBrian.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex
+/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip50
+\fb@frw=\dimen143
+\fb@frh=\dimen144
+\FrameRule=\dimen145
+\FrameSep=\dimen146
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 1
+12.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen147
+\Gm@wd@mp=\dimen148
+\Gm@odd@mp=\dimen149
+\Gm@even@mp=\dimen150
+\Gm@layoutwidth=\dimen151
+\Gm@layoutheight=\dimen152
+\Gm@layouthoffset=\dimen153
+\Gm@layoutvoffset=\dimen154
+\Gm@dimlist=\toks17
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count196
+)
+\@linkdim=\dimen155
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count199
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Option `pdfusetitle' set `true' on input line 4060.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4060.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4060
+.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4060.
+Package hyperref Info: Option `breaklinks' set `false' on input line 4060.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count266
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen156
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count267
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip51
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box51
+) (./assignment_09_2_ReppetoBrian.aux)
+\openout1 = `assignment_09_2_ReppetoBrian.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen159
+\scratchbox=\box52
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen160
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\big@size=\dimen161
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 4.86812pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 76.
+(./assignment_09_2_ReppetoBrian.out) (./assignment_09_2_ReppetoBrian.out)
+\@outlinefile=\write3
+\openout3 = `assignment_09_2_ReppetoBrian.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pplx.fd
+File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+85.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+9.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 95.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+100.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##         4         5         9        20        23        2
+9        31        34        44[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4048469 0.3963584 0.3789795 0.3858841 0.3937299 0.406405
+9 0.4005530 0.3989758 0.3970116[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##        45        59        64        66        68        7
+5        81        86        93[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.3902614 0.4912433 0.4895130 0.4927954 0.5105171 0.491438
+6 0.5052435 0.4894538 0.4949648[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##        96       104       113       114       117       12
+2       123       124       128[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4952474 0.4349856 0.4352794 0.4382040 0.4385620 0.433260
+9 0.4332466 0.4333228 0.4353101[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       129       134       136       139       144       15
+2       154       160       174[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4348778 0.4293875 0.4348100 0.4312895 0.4390672 0.434868
+0 0.4329375 0.4351788 0.4252932[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       177       183       186       194       196       19
+9       200       205       209[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4262217 0.4114478 0.4280357 0.4019428 0.4084266 0.489718
+6 0.4839768 0.4907929 0.4933128[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       214       217       220       221       231       24
+5       251       258       260[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4838753 0.4866891 0.4849638 0.4829257 0.3873681 0.390750
+5 0.3879897 0.3877217 0.5349380[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       270       278       279       286       287       29
+0       301       305       310[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5317538 0.5361680 0.5433535 0.5387093 0.5429486 0.539565
+6 0.5444645 0.5377039 0.5399323[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       313       319       326       329       336       33
+8       340       342       343[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5450823 0.5008187 0.5018512 0.4933912 0.4952490 0.496797
+7 0.5049788 0.5066976 0.5036812[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       347       351       352       359       364       36
+7       368       373       380[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5042475 0.4932112 0.5047179 0.4985164 0.5010874 0.506176
+7 0.5107832 0.5260540 0.5182766[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       383       386       395       400       401       40
+5       409       413       419[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5345097 0.5378169 0.5180122 0.5211844 0.5247113 0.520346
+1 0.5232296 0.5262791 0.5316744[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       423       431       435       436       439       44
+1       446       447       452[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5325890 0.5429018 0.5349905 0.5420308 0.5451788 0.532633
+7 0.5390994 0.5400997 0.5415740[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       456       465       466       468       470       48
+4       494       495       515[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5301261 0.5366030 0.5379332 0.5318592 0.5296202 0.605830
+9 0.6104535 0.6166963 0.6076502[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       518       519       525       534       535       53
+8       541       549       551[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.6098502 0.6111415 0.6100516 0.4028794 0.4010491 0.390788
+1 0.4048762 0.4103108 0.4032439[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       552       553       556       575       576       58
+7       588       591       597[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4017009 0.4024125 0.3948095 0.4030217 0.5401973 0.543643
+0 0.5406647 0.5434188 0.5406168[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       599       608       609       612       628       63
+2       635       639       641[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5450107 0.5594199 0.5523968 0.5384868 0.5535787 0.557471
+3 0.5684541 0.5633256 0.5593648[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       642       643       648       655       656       65
+7       658       665       693[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5527910 0.5539353 0.5647708 0.5497030 0.5574080 0.552339
+6 0.5567961 0.5474543 0.5041145[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       704       713       714       716       718       72
+3       728       734       736[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4990655 0.4989570 0.3685882 0.3643515 0.3695009 0.370078
+4 0.3663279 0.3604555 0.3651941[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       745       748       759       763       766       77
+5       777       782       787[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.3704403 0.3695366 0.3661003 0.3714134 0.3669010 0.463250
+3 0.4630463 0.4649184 0.4681036[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       795       801       804       806       807       81
+0       812       814       825[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4568643 0.4726063 0.4566534 0.4512534 0.4582433 0.457121
+3 0.4712813 0.4715620 0.5047096[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       842       848       855       856       857       86
+7       876       877       878[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5122521 0.5196999 0.5149958 0.5098188 0.5057732 0.523548
+4 0.5190588 0.5085192 0.5181539[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       881       889       890       891       892       91
+0       916       920       940[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5171138 0.5210554 0.5167940 0.5191336 0.5171379 0.516354
+2 0.5221615 0.5219566 0.4316760[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       942       948       949       952       953       95
+7       959       962       965[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4320192 0.4381571 0.4322574 0.4348580 0.4364300 0.428023
+9 0.4277476 0.4393581 0.4309392[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##       970       972       973       975       976       98
+6       994      1003      1004[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4321056 0.4261940 0.4387456 0.4348985 0.4338531 0.435652
+9 0.5368518 0.5261309 0.5320128[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1008      1010      1012      1016      1019      102
+2      1028      1030      1031[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4992513 0.5201869 0.5201184 0.5366243 0.5383631 0.520370
+0 0.5248956 0.5147527 0.5120258[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1037      1040      1048      1059      1066      108
+0      1086      1088      1089[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5182426 0.4454133 0.4452501 0.4501085 0.4504436 0.444502
+4 0.4465533 0.4485562 0.4472533[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1095      1097      1099      1106      1115      112
+7      1131      1133      1139[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4440121 0.5064534 0.5098135 0.5091205 0.5135906 0.501314
+4 0.5139128 0.5087114 0.5687760[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1147      1153      1158      1161      1164      116
+6      1169      1175      1179[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5721920 0.5806708 0.5811489 0.5684049 0.5774636 0.559874
+9 0.5560831 0.5458520 0.5588177[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1191      1194      1203      1220      1227      123
+0      1247      1253      1255[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5570438 0.5600346 0.5564487 0.5542140 0.5445378 0.554605
+0 0.5532934 0.5465872 0.5447842[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1256      1259      1260      1261      1264      127
+0      1273      1274      1284[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5460822 0.5458005 0.5490261 0.5416401 0.5491875 0.553072
+6 0.4538392 0.4515331 0.4406284[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1291      1296      1299      1305      1308      131
+2      1314      1319      1334[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4384443 0.4473023 0.4389325 0.4467838 0.4439730 0.432096
+7 0.4418670 0.4568220 0.4461078[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1342      1343      1351      1355      1361      137
+4      1388      1392      1395[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.4551667 0.4464504 0.5171259 0.5077329 0.5129415 0.512963
+4 0.5101147 0.5089372 0.5146739[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1398      1400      1405      1412      1414      141
+5      1424      1428      1434[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5163131 0.5107736 0.5795533 0.5981800 0.5923009 0.584412
+0 0.5900947 0.5957915 0.5808095[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ##      1436      1443      1451      1470      1473      147
+5      1482      1483      1484[] 
+ []
+
+
+Overfull \hbox (10.96736pt too wide) in paragraph at lines 207--207
+[]\T1/lmtt/m/n/10 ## 0.5955367 0.5954479 0.5926567 0.3964789 0.4105542 0.395927
+8 0.4160845 0.4021016 0.4017718[] 
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2023
+/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fo
+nts/enc/dvips/lm/lm-ts1.enc}] [2]
+Overfull \hbox (168.4669pt too wide) in paragraph at lines 271--271
+[]\T1/lmtt/m/n/10 ## BLAS:   /System/Library/Frameworks/Accelerate.framework/Ve
+rsions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib[] 
+ []
+
+
+Overfull \hbox (136.967pt too wide) in paragraph at lines 271--271
+[]\T1/lmtt/m/n/10 ## LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64
+/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0[] 
+ []
+
+
+Overfull \hbox (0.46739pt too wide) in paragraph at lines 271--271
+[]\T1/lmtt/m/n/10 ## [37] crayon_1.5.2         generics_0.1.3       rstudioapi_
+0.15.0    future.apply_1.11.0[] 
+ []
+
+[3] [4] (./assignment_09_2_ReppetoBrian.aux)
+Package rerunfilecheck Info: File `assignment_09_2_ReppetoBrian.out' has not ch
+anged.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 9734 strings out of 476025
+ 153439 string characters out of 5790017
+ 1892388 words of memory out of 5000000
+ 30043 multiletter control sequences out of 15000+600000
+ 526859 words of font info for 59 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,6n,76p,272b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texlive/2023/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on assignment_09_2_ReppetoBrian.pdf (4 pages, 106895 bytes).
+PDF statistics:
+ 54 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

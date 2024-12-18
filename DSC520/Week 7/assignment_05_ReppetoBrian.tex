@@ -1,0 +1,185 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[sc]{mathpazo}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\makeatother
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+
+\title{\title{\title{\title{\title{\title{\title{}}}}}}}
+
+
+
+\maketitle
+The results below are generated from an R script.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Assignment: ASSIGNMENT 5}
+\hlcom{# Name: Reppeto, Brian}
+\hlcom{# Date: 2023-07-18}
+
+\hlcom{## Set the working directory to the root of your DSC 520 directory}
+\hlkwd{setwd}\hlstd{(}\hlstr{"~/DSC520/dsc520"}\hlstd{)}
+
+\hlcom{## Load the `data/r4ds/heights.csv` to}
+\hlstd{heights_df} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"data/r4ds/heights.csv"}\hlstd{)}
+
+\hlcom{## Using `cor()` compute correclation coefficients for}
+\hlcom{## height vs. earn}
+\hlstd{cor_coeff_height_earn} \hlkwb{<-} \hlkwd{cor}\hlstd{(heights_df}\hlopt{$}\hlstd{height, heights_df}\hlopt{$}\hlstd{earn)}
+\hlstd{cor_coeff_height_earn}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.2418481
+\end{verbatim}
+\begin{alltt}
+\hlcom{### age vs. earn}
+\hlstd{cor_coeff_age_earn} \hlkwb{<-} \hlkwd{cor}\hlstd{(heights_df}\hlopt{$}\hlstd{age, heights_df}\hlopt{$}\hlstd{earn)}
+\hlstd{cor_coeff_age_earn}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.08100297
+\end{verbatim}
+\begin{alltt}
+\hlcom{### ed vs. earn}
+\hlstd{cor_coeff_ed_earn} \hlkwb{<-} \hlkwd{cor}\hlstd{(heights_df}\hlopt{$}\hlstd{ed, heights_df}\hlopt{$}\hlstd{earn)}
+\hlstd{cor_coeff_ed_earn}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.3399765
+\end{verbatim}
+\begin{alltt}
+\hlcom{## Spurious correlation}
+\hlcom{## The following is data on US spending on science, space, and technology in millions of today's dollars}
+\hlcom{## and Suicides by hanging strangulation and suffocation for the years 1999 to 2009}
+\hlcom{## Compute the correlation between these variables}
+\hlstd{tech_spending} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{18079}\hlstd{,} \hlnum{18594}\hlstd{,} \hlnum{19753}\hlstd{,} \hlnum{20734}\hlstd{,} \hlnum{20831}\hlstd{,} \hlnum{23029}\hlstd{,} \hlnum{23597}\hlstd{,} \hlnum{23584}\hlstd{,} \hlnum{25525}\hlstd{,} \hlnum{27731}\hlstd{,} \hlnum{29449}\hlstd{)}
+\hlstd{suicides} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{5427}\hlstd{,} \hlnum{5688}\hlstd{,} \hlnum{6198}\hlstd{,} \hlnum{6462}\hlstd{,} \hlnum{6635}\hlstd{,} \hlnum{7336}\hlstd{,} \hlnum{7248}\hlstd{,} \hlnum{7491}\hlstd{,} \hlnum{8161}\hlstd{,} \hlnum{8578}\hlstd{,} \hlnum{9000}\hlstd{)}
+\hlstd{spur_corr} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(tech_spending, suicides)}
+
+\hlstd{corr_coef_spur} \hlkwb{<-} \hlkwd{cor}\hlstd{(spur_corr}\hlopt{$}\hlstd{tech_spending, spur_corr}\hlopt{$}\hlstd{suicides)}
+\hlstd{corr_coef_spur}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.9920817
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The R session information (including the OS info, R version and all
+packages used):
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{sessionInfo}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## R version 4.3.0 (2023-04-21)
+## Platform: aarch64-apple-darwin20 (64-bit)
+## Running under: macOS Ventura 13.4.1
+## 
+## Matrix products: default
+## BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## time zone: America/New_York
+## tzcode source: internal
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitr_1.43
+## 
+## loaded via a namespace (and not attached):
+## [1] compiler_4.3.0  tools_4.3.0     rstudioapi_0.14 highr_0.10      xfun_0.39      
+## [6] evaluate_0.21
+\end{verbatim}
+\begin{alltt}
+\hlkwd{Sys.time}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "2023-07-18 20:16:12 EDT"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{document}
