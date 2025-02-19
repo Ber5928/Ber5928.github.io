@@ -1,7 +1,7 @@
-# DSC 640 Week 1 - Netflix Analysis (Power BI)
+# etflix Analysis (Power BI)
 
 ## Project Overview
-This Power BI report is created as part of the **DSC 640** course for Week 1. The project focuses on analyzing Netflix data, providing insights into trends, genres, viewer engagement, and other key metrics.
+This Power BI report will focuses on analyzing Netflix data, providing insights into trends, genres, viewer engagement, and other key metrics.
 
 ## Dataset
 The dataset used in this analysis includes information about Netflix movies and TV shows, including:
@@ -42,8 +42,8 @@ The Power BI dashboard provides interactive visualizations on:
 - Comparison with other streaming services.
 
 ## Author
-**[Your Name]**  
-DSC 640 - Data Visualization & Communication
+**Brian Reppeto**  
+
 
 ## License
 This project is for educational purposes and follows standard academic integrity guidelines.
