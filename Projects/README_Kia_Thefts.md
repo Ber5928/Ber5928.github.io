@@ -1,10 +1,10 @@
-# Kia Thefts Analysis - DSC 640 Final Project
+# Kia Thefts Analysis
 
 ## Project Overview
 This project analyzes trends and patterns in **Kia vehicle thefts**, utilizing statistical and visualization techniques. The analysis is conducted using **R Markdown**, incorporating data exploration, visualization, and modeling to identify key insights.
 
 ## File Description
-- **`Brian_Reppeto_DSC_640_Kia_Thefts_FINAL_MARKDOWN.Rmd`**: R Markdown file containing data analysis, visualizations, and findings related to Kia theft incidents.
+- **`Kia_Thefts.Rmd`**: R Markdown file containing data analysis, visualizations, and findings related to Kia theft incidents.
 
 ## Key Components
 ### 1. Data Collection & Preprocessing
@@ -45,4 +45,4 @@ install.packages(c("ggplot2", "dplyr", "tidyverse", "lubridate", "forecast", "le
 
 ## Author
 **Brian Reppeto**  
-Course: **DSC 640 - Data Visualization & Communication**
+
