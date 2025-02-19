@@ -54,4 +54,4 @@ pip install torch transformers datasets numpy pandas matplotlib scikit-learn
 
 ## Author
 **Brian Reppeto**  
-Course: **DSC680 - Machine Learning for Data Science**
+
