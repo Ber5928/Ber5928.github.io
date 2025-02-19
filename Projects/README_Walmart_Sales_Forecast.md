@@ -1,7 +1,7 @@
-# DSC 680 Project 1 - Sales Forecasting
+# Sales Forecasting wuth ML
 
 ## Project Overview
-This project is part of the **DSC 680** course and focuses on sales forecasting using machine learning techniques. The dataset utilized for this project is the **Walmart Sales Forecasting** dataset from Kaggle. The objective is to develop predictive models to estimate future sales based on various features such as **store size, department, consumer price index (CPI), and other economic factors**.
+This project will focuses on sales forecasting using machine learning techniques. The dataset utilized for this project is the **Walmart Sales Forecasting** dataset from Kaggle. The objective is to develop predictive models to estimate future sales based on various features such as **store size, department, consumer price index (CPI), and other economic factors**.
 
 ## Dataset
 The dataset includes historical sales data from Walmart stores. The key features used for forecasting include:
@@ -52,7 +52,7 @@ To run the notebook:
 
 ## Author
 **Brian Reppeto**  
-DSC 680 - Data Science Capstone Project
+
 
 ## License
 This project is for educational purposes and follows standard academic integrity guidelines.
