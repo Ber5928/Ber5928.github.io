@@ -1,4 +1,4 @@
-# etflix Analysis (Power BI)
+# Netflix Analysis (Power BI)
 
 ## Project Overview
 This Power BI report will focuses on analyzing Netflix data, providing insights into trends, genres, viewer engagement, and other key metrics.
