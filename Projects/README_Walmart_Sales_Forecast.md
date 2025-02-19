@@ -1,4 +1,4 @@
-# Sales Forecasting wuth ML
+# Sales Forecasting with ML
 
 ## Project Overview
 This project will focuses on sales forecasting using machine learning techniques. The dataset utilized for this project is the **Walmart Sales Forecasting** dataset from Kaggle. The objective is to develop predictive models to estimate future sales based on various features such as **store size, department, consumer price index (CPI), and other economic factors**.
