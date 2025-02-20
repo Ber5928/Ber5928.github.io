@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brian Reppeto - Data Science Portfolio</title>
   <style>
     /* Base styles */
@@ -12,22 +12,38 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.3s;
     }
+
+    /* Header with overlay text */
     header {
-      background-color: #004080;
-      color: white;
-      padding: 1em 0;
-      text-align: center;
       position: relative;
       overflow: hidden;
+      margin-bottom: 0;
+      padding: 0;
     }
     header img {
       width: 100%;
       height: auto;
-      max-height: 150px;
+      max-height: 300px; /* Increase for a taller header */
       object-fit: cover;
+      display: block;
     }
+    /* Overlay container for header text */
+    .header-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      color: #000; /* Black text */
+      padding: 1em 2em;
+      border-radius: 8px;
+      font-size: 1.8em;
+      text-align: center;
+      font-weight: bold;
+    }
+
     nav {
       text-align: center;
       margin: 1em 0;
@@ -43,6 +59,7 @@
       margin-left: 1em;
       cursor: pointer;
     }
+
     section {
       padding: 2em;
       margin: 2em auto;
@@ -58,17 +75,24 @@
       opacity: 1;
       transform: translateY(0);
     }
+
     h2 {
       border-bottom: 2px solid #0073e6;
       padding-bottom: 0.5em;
+      color: #000; /* Ensures headings are black */
     }
+    p, a, li, h3 {
+      color: #000; /* Ensures all text is black */
+    }
+
     .project {
       margin-bottom: 1.5em;
     }
     .project h3 {
       margin: 0;
-      color: #0073e6;
+      color: #0073e6; /* Project title can remain blue */
     }
+
     footer {
       background-color: #0073e6;
       color: white;
@@ -88,28 +112,39 @@
       margin: 0.5em;
       border-radius: 5px;
     }
+
     /* Dark mode styles */
     body.dark-mode {
-      background-color: #222;
-      color: #ddd;
+      background-color: #222; /* Dark background */
     }
+    /* Keep all text black (#000) in dark mode */
+    body.dark-mode,
+    body.dark-mode p,
+    body.dark-mode a,
+    body.dark-mode li,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode .header-title {
+      color: #000 !important;
+    }
+    /* Adjust header/footer background in dark mode so text is still visible */
     body.dark-mode header {
-      background-color: #333;
-    }
-    body.dark-mode nav a {
-      color: #66b2ff;
+      background-color: #111;
     }
     body.dark-mode footer {
-      background-color: #333;
+      background-color: #111;
+      color: #000 !important;
     }
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header>
-    <!-- Optional: If you have multiple header images, you can implement a slider here -->
     <img src="banner-image.jpg" alt="Brian Reppeto - Data Science Portfolio">
+    <div class="header-title">Brian Reppeto - Data Science Portfolio</div>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -118,6 +153,7 @@
     <button id="dark-mode-toggle">Toggle Dark Mode</button>
   </nav>
 
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -125,6 +161,7 @@
     </p>
   </section>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects">
     <h2>Projects</h2>
 
@@ -228,6 +265,7 @@
     </div>
   </section>
 
+  <!-- SKILLS SECTION -->
   <section id="skills">
     <h2>Skills</h2>
     <ul class="skills-list">
@@ -266,12 +304,14 @@
     </ul>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:b_reppeto@yahoo.com">breppeto@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/brian-reppeto-mba-7850b54b" target="_blank">linkedin.com/in/brian-reppeto-mba-7850b54b</a></p>
+    <p>Email: <a href="mailto:b_reppeto@yahoo.com" style="color:#000;">breppeto@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/brian-reppeto-mba-7850b54b" target="_blank" style="color:#000;">linkedin.com/in/brian-reppeto-mba-7850b54b</a></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2024 Brian Reppeto | Data Science Portfolio</p>
   </footer>
