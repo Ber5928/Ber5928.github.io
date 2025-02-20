@@ -1,7 +1,6 @@
-# NFL Data Analysis - Milestone 5
+# NFL Data Analysis
 
-## Author: Brian Reppeto  
-**Course:** DSC 540 - Week 12  
+## Author: Brian Reppeto   
 **Date:** 02/21/2024  
 
 ## Project Overview  
@@ -45,9 +44,8 @@ This project highlights both the analytical and ethical complexities of sports a
    ```
 2. Run the Jupyter Notebook to explore the analysis:  
    ```bash
-   jupyter notebook Brian_Reppeto_540_week_11_12_Milestone_5.ipynb
+   jupyter notebook NFL_Fantasy_FootBall_Value.ipynb
    ```
-3. Ensure `DSC540.db` is available in the working directory for database operations.
 
 ## License  
 This project is for educational purposes only.
